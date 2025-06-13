@@ -1,0 +1,61 @@
+{
+  "name": "matcha-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "expo": "~53.0.11",
+    "expo-status-bar": "~2.2.3",
+    "firebase": "^11.9.1",
+    "react": "19.0.0",
+    "react-native": "0.79.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@testing-library/react-native": "^13.2.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/axios": "^0.14.4",
+    "@types/jest": "^29.5.14",
+    "@types/react": "~19.0.10",
+    "@types/react-native": "^0.73.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.4.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "husky": "^9.1.7",
+    "jest": "^30.0.0",
+    "jest-expo": "^53.0.7",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.4.0",
+    "typescript": "~5.8.3"
+  },
+  "private": true,
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.test.{ts,tsx}": [
+      "jest --bail --findRelatedTests"
+    ]
+  }
+}
